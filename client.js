@@ -73,7 +73,7 @@ function comeOnBrain (anArray, startingIndexNumber){
     answer = answer + anArray[i];
 } return answer;
 } else {
-  return "Your number is too big!!"
+  console.warn('Your number is too big!!');
 }}
 console.log(comeOnBrain(youCanDoThis, 3));
 console.log(comeOnBrain(youCanDoThis, 2));
