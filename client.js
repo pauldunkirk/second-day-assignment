@@ -61,19 +61,24 @@
 //decided to put array in a var for clarity
 var youCanDoThis = ['ASDF', 'BLAH', 'Oh! ', 'Hi ', 'There!'];
 //Example 1: comeOnBrain function with youCanDoThis array and 3 as starting index 'hi'
-console.log(comeOnBrain(youCanDoThis, 3));
+
 //Example 2: comeOnBrain function with youCanDoThis array and 2 as starting index: 'oh'
-console.log(comeOnBrain(youCanDoThis, 2));
+
 // comeOnBrain funct w/ 2 parameters: youCanDoThis array and second is startingIndexNumber
 //I need to return startingIndexNumber name as well as rest of array
 function comeOnBrain (anArray, startingIndexNumber){
-  var answer = '';
-  for (var i = startingIndexNumber; i < anArray.length; i++){
-    //console.log(answer);
+  if (startingIndexNumber < anArray.length) {
+    var answer = '';
+    for (var i = startingIndexNumber; i < anArray.length; i++){
     answer = answer + anArray[i];
-}
-return answer;
-};
+} return answer;
+} else {
+  return "Your number is too big!!"
+}}
+console.log(comeOnBrain(youCanDoThis, 3));
+console.log(comeOnBrain(youCanDoThis, 2));
+console.log(comeOnBrain(youCanDoThis, 6));
+
 //Example 1
 //console.log(yourFunction(['ASDF', 'BLAH', 'Oh! ', 'Hi ', 'There!'], 3));
 //should log: Hi There!
@@ -83,7 +88,8 @@ return answer;
 // should log: Oh! Hi There!
 
 
-
+//If a user submits an index that is greater than the array,
+//you should use console.warn() to let them know that what they did won't work.
 
 
 
