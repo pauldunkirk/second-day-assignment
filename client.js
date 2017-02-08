@@ -70,7 +70,7 @@ function comeOnBrain (anArray, startingIndexNumber){
   if (startingIndexNumber < anArray.length) {
     var answer = '';
     for (var i = startingIndexNumber; i < anArray.length; i++){
-    answer = answer + anArray[i];
+    answer += answer + anArray[i];
 } return answer;
 } else {
   console.warn('Your number is too big!!');
