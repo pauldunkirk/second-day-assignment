@@ -51,13 +51,36 @@
 // console.log(firstLetter);
 
 //
-// var commaSepValues = "one, two, three, four";
+// var commaSepValues = 'one, two, three, four';
 //
 // var newArray = commaSepValues.split(','); //split or delimiter at commas - we also did with space or with commas
 // console.log(newArray);
 //
 
 
+//decided to put array in a var for clarity
+var youCanDoThis = ['ASDF', 'BLAH', 'Oh! ', 'Hi ', 'There!'];
+//Example 1: comeOnBrain function with youCanDoThis array and 3 as starting index 'hi'
+console.log(comeOnBrain(youCanDoThis, 3));
+//Example 2: comeOnBrain function with youCanDoThis array and 2 as starting index: 'oh'
+console.log(comeOnBrain(youCanDoThis, 2));
+// comeOnBrain funct w/ 2 parameters: youCanDoThis array and second is startingIndexNumber
+//I need to return startingIndexNumber name as well as rest of array
+function comeOnBrain (anArray, startingIndexNumber){
+  var answer = '';
+  for (var i = startingIndexNumber; i < anArray.length; i++){
+    //console.log(answer);
+    answer = answer + anArray[i];
+}
+return answer;
+};
+//Example 1
+//console.log(yourFunction(['ASDF', 'BLAH', 'Oh! ', 'Hi ', 'There!'], 3));
+//should log: Hi There!
+
+//Example 2
+//console.log(yourFunction(['ASDF', 'BLAH', 'Oh! ', 'Hi ', 'There!'], 2));
+// should log: Oh! Hi There!
 
 
 
